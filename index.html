@@ -4,64 +4,37 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>calculator</title>
-	<style type="text/css">
-		*{
-			font-size: 1.25rem;
-		}
-		.dabba{
-			margin: 20vh 0 0 35%;
-			background-color: rgb(33, 31, 31);
-			padding: 3%;
-			width: 250px;
-			border-radius: 10px;
-		}
-		#mathvalue{
-			width: 93%;
-			padding: 4%;
-			margin-bottom: 5%;
-			border-radius: 5px;
-			border: none;
-			box-shadow: 0 0 3px rgb(196, 192, 192);
-		}
-		button{
-			width: 23%;
-			margin: 2% 0;
-			border-radius: 7px;
-			cursor: pointer;
-			padding: 2% 0;
-			border: none;
-		}
-		#r11{
-			width: 49%;
-		}
-		button:hover{
-			box-shadow: 0 0 5px rgb(138, 137, 137);
-			background-color: rgb(216, 213, 213);
-		}
-	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2c0e5f2b71.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="dabba">
-		<label for="mathvalue"></label>
-		<input type="text" name="mathvalue" id="mathvalue"><br>		
-		<button id="r11" onclick= "mathvalue.value=''">AC</button>
-		<button onclick= "mathvalue.value=mathvalue.value.slice(0,-1)">DE</button>
-		<button onclick= "mathvalue.value+='/'">/</button> <br>
-		<button onclick="mathvalue.value+='7'" >7</button>
-		<button onclick= "mathvalue.value+='8'" >8</button>
-		<button onclick= "mathvalue.value+='9'" >9</button>
-		<button onclick= "mathvalue.value+='*'" >*</button><br>
-		<button onclick= "mathvalue.value+='4'" >4</button>
-		<button onclick= "mathvalue.value+='5'" >5</button>
-		<button onclick= "mathvalue.value+='6'">6</button> 
-		<button onclick= "mathvalue.value+='-'" >-</button> <br>
-		<button onclick= "mathvalue.value+='1'" >1</button>
-		<button onclick= "mathvalue.value+='2'" >2</button>
-		<button onclick= "mathvalue.value+='3'">3</button> 
-		<button onclick= "mathvalue.value+='+'">+</button> <br>
-		<button onclick= "mathvalue.value+='.'" >.</button>
-		<button onclick= "mathvalue.value+='0'" >0</button>
-		<button id="r11" onclick= "mathvalue.value=eval(mathvalue.value)" >=</button>		
-	</div>	
+			<h1 id="h1tag">Calculator</h1> 
+			<span class="mode"><i class="fa-solid fa-sun"></i></span>
+			<div class="calculatoor">
+				<label for="mathvalue"></label>
+				<input type="text" name="mathvalue" id="mathvalue"><br>		
+				<button id="bigBtn" onclick= "mathvalue.value=''">AC</button>
+				<button onclick= "mathvalue.value=mathvalue.value.slice(0,-1)">DE</button>
+				<button onclick= "mathvalue.value+='/'" >/</button> <br>
+				<button onclick= "mathvalue.value+='7'" >7</button>
+				<button onclick= "mathvalue.value+='8'" >8</button>
+				<button onclick= "mathvalue.value+='9'" >9</button>
+				<button onclick= "mathvalue.value+='*'" >*</button><br>
+				<button onclick= "mathvalue.value+='4'" >4</button>
+				<button onclick= "mathvalue.value+='5'" >5</button>
+				<button onclick= "mathvalue.value+='6'" >6</button> 
+				<button onclick= "mathvalue.value+='-'" >-</button> <br>
+				<button onclick= "mathvalue.value+='1'" >1</button>
+				<button onclick= "mathvalue.value+='2'" >2</button>
+				<button onclick= "mathvalue.value+='3'" >3</button> 
+				<button onclick= "mathvalue.value+='+'" >+</button> <br>
+				<button onclick= "mathvalue.value+='.'" >.</button>
+				<button onclick= "mathvalue.value+='0'" >0</button>
+				<button id="bigBtn" onclick= "mathvalue.value=eval(mathvalue.value)" >=</button>		
+			</div>	
+	<script src="calc.js"></script>
 </body>
 </html>
